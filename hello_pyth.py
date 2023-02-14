@@ -8,3 +8,6 @@ my_list.sort(key = lambda x: x.lower())
 
 print(my_list)
 
+upper = [x.upper() for x in my_list]
+
+print(upper)
