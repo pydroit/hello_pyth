@@ -593,36 +593,6 @@ export async function main() {
       console.error(e);
     }
   }
-  if (!queuedFederated.includes('nbdime-jupyterlab')) {
-    try {
-      let ext = require('nbdime-jupyterlab');
-      for (let plugin of activePlugins(ext)) {
-        register.push(plugin);
-      }
-    } catch (e) {
-      console.error(e);
-    }
-  }
-  if (!queuedFederated.includes('@jupyterlab/server-proxy')) {
-    try {
-      let ext = require('@jupyterlab/server-proxy');
-      for (let plugin of activePlugins(ext)) {
-        register.push(plugin);
-      }
-    } catch (e) {
-      console.error(e);
-    }
-  }
-  if (!queuedFederated.includes('@jupyterlab/git')) {
-    try {
-      let ext = require('@jupyterlab/git');
-      for (let plugin of activePlugins(ext)) {
-        register.push(plugin);
-      }
-    } catch (e) {
-      console.error(e);
-    }
-  }
 
   // Add the federated extensions.
   const federatedExtensions = await Promise.allSettled(federatedExtensionPromises);
