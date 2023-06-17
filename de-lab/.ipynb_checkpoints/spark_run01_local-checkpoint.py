@@ -17,4 +17,4 @@ where((F.col("extract_word") != "")&(~F.col("extract_word").isin(exclusion_word_
 groupby(F.col("extract_word")).
 count()
 )
-result.coalesce(1).write.csv(r"C:\Users\oluwa\Downloads\combined_words3.csv")
+result.coalesce(1).write.csv(r"C:\Users\oluwa\Downloads\combined_words4_.csv")
